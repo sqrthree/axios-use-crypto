@@ -9,6 +9,13 @@
     "test": "ava",
     "test:cov": "nyc ava"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sqrthree/axios-use-crypto.git"
