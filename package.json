@@ -2,9 +2,10 @@
   "name": "axios-use-crypto",
   "version": "0.1.0",
   "description": "A crypto interceptor for axios.",
-  "main": "index.js",
+  "main": "dist/index.umd.js",
+  "module": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup index.js --file dist/index.umd.js --format umd --name 'useCrypto'"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "dependencies": {
     "crypto-js": "~4.0.0",
     "lodash-es": "~4.17.21"
+  },
+  "devDependencies": {
+    "rollup": "~2.53.2"
   }
 }
