@@ -1,5 +1,5 @@
 {
-  "name": "axios-use-crypto",
+  "name": "@sqrtthree/axios-use-crypto",
   "version": "0.1.0",
   "description": "A crypto interceptor for axios.",
   "main": "dist/index.umd.js",
