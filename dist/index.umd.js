@@ -1,14 +1,16 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('crypto-js/aes'), require('crypto-js/enc-base64'), require('crypto-js/enc-hex'), require('lodash-es')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'crypto-js/aes', 'crypto-js/enc-base64', 'crypto-js/enc-hex', 'lodash-es'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.useCrypto = {}, global.AES, global.base64, global.hex, global.lodashEs));
-}(this, (function (exports, AES, base64, hex, lodashEs) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('crypto-js/aes'), require('crypto-js/enc-base64'), require('crypto-js/enc-hex'), require('lodash/assign'), require('lodash/omit')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'crypto-js/aes', 'crypto-js/enc-base64', 'crypto-js/enc-hex', 'lodash/assign', 'lodash/omit'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.useCrypto = {}, global.AES, global.base64, global.hex, global.assign, global.omit));
+}(this, (function (exports, AES, base64, hex, assign, omit) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
   var AES__default = /*#__PURE__*/_interopDefaultLegacy(AES);
   var base64__default = /*#__PURE__*/_interopDefaultLegacy(base64);
   var hex__default = /*#__PURE__*/_interopDefaultLegacy(hex);
+  var assign__default = /*#__PURE__*/_interopDefaultLegacy(assign);
+  var omit__default = /*#__PURE__*/_interopDefaultLegacy(omit);
 
   const randomString = function randomString(len) {
     const dictionary =
@@ -68,7 +70,7 @@
 
       if (method === 'get' || method === 'delete' || hasParams) {
         const { key } = params;
-        const payload = lodashEs.assign(lodashEs.omit(params, ['key']), {
+        const payload = assign__default['default'](omit__default['default'](params, ['key']), {
           timestamp,
           nonce,
         });
@@ -87,7 +89,7 @@
         hasBody
       ) {
         const { key } = data;
-        const payload = lodashEs.assign({}, lodashEs.omit(data, ['key']), {
+        const payload = assign__default['default']({}, omit__default['default'](data, ['key']), {
           timestamp,
           nonce,
         });

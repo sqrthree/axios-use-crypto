@@ -1,7 +1,8 @@
 import AES from 'crypto-js/aes'
 import base64 from 'crypto-js/enc-base64'
 import hex from 'crypto-js/enc-hex'
-import { assign, omit } from 'lodash-es'
+import assign from 'lodash/assign'
+import omit from 'lodash/omit'
 
 const randomString = function randomString(len) {
   const dictionary =

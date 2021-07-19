@@ -5,7 +5,9 @@
   "main": "dist/index.umd.js",
   "module": "index.js",
   "scripts": {
-    "build": "rollup index.js --file dist/index.umd.js --format umd --name 'useCrypto'"
+    "build": "rollup index.js --file dist/index.umd.js --format umd --name 'useCrypto'",
+    "test": "ava",
+    "test:cov": "nyc ava"
   },
   "repository": {
     "type": "git",
@@ -20,9 +22,12 @@
   "homepage": "https://github.com/sqrthree/axios-use-crypto#readme",
   "dependencies": {
     "crypto-js": "~4.0.0",
-    "lodash-es": "~4.17.21"
+    "lodash": "~4.17.21"
   },
   "devDependencies": {
+    "ava": "~3.15.0",
+    "axios": "~0.21.1",
+    "nyc": "~15.1.0",
     "rollup": "~2.53.2"
   }
 }
