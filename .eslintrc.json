@@ -1,0 +1,7 @@
+{
+  "extends": ["@sqrtthree/eslint-config-base"],
+  "rules": {
+    "no-param-reassign": "off"
+  }
+}
+

@@ -7,7 +7,8 @@
   "scripts": {
     "build": "rollup index.js --file dist/index.umd.js --format umd --name 'useCrypto'",
     "test": "ava",
-    "test:cov": "nyc ava"
+    "test:cov": "nyc ava",
+    "lint": "eslint ./"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -32,9 +33,13 @@
     "lodash": "~4.17.21"
   },
   "devDependencies": {
+    "@sqrtthree/eslint-config-base": "~0.1.1",
+    "@sqrtthree/prettier-config": "~2.0.1",
     "ava": "~3.15.0",
     "axios": "~0.21.1",
+    "eslint": "~7.31.0",
     "nyc": "~15.1.0",
+    "prettier": "~2.3.2",
     "rollup": "~2.53.2"
   }
 }

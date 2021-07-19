@@ -1,4 +1,3 @@
-const crypto = require('crypto')
 const axios = require('axios')
 const test = require('ava')
 
@@ -11,7 +10,7 @@ const mockAdapter = (config) => {
       status: 200,
       statusText: 'OK',
       headers: config.headers,
-      config: config,
+      config,
       request: null,
     }
 
