@@ -1,0 +1,24 @@
+{
+  "name": "axios-use-crypto",
+  "version": "0.1.0",
+  "description": "A crypto interceptor for axios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqrthree/axios-use-crypto.git"
+  },
+  "keywords": [],
+  "author": "sqrtthree <imsqrtthree@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sqrthree/axios-use-crypto/issues"
+  },
+  "homepage": "https://github.com/sqrthree/axios-use-crypto#readme",
+  "dependencies": {
+    "crypto-js": "~4.0.0",
+    "lodash-es": "~4.17.21"
+  }
+}
